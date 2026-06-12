@@ -76,14 +76,24 @@
 
         /* Hero Section with Smooth Floating Animation */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
-            margin-top: 40px;
+            padding: 120px 20px 60px 20px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #6366f1;
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
+            animation: fadeInDown 1s ease;
         }
 
         .hero h1 {
@@ -252,6 +262,7 @@
     </header>
 
     <section class="hero" id="home">
+        <img src="ASIF CHOWDHURY (1).jpg" alt="Asif Chowdhury" class="profile-img">
         <h1>Hi, I'm <span>Asif Chowdhury</span></h1>
         <p>Freelance Digital Marketer & Email Marketing Specialist. I help e-commerce brands and businesses grow their revenue through premium Mailchimp & Klaviyo automations, high-converting sign-up forms, and strategic landing pages.</p>
         <a href="#contact" class="btn">Grow Your Business</a>
@@ -262,18 +273,18 @@
         <div class="grid">
             <div class="card">
                 <i class="fa-solid fa-envelope-open-text"></i>
-                <h3>Email Automation & Flows</h3>
-                <p>Setting up advanced, automated email flows in Klaviyo and Mailchimp (Welcome Series, Abandoned Cart, Customer Winback) to recover lost sales automatically.</p>
+                <h3>Mailchimp Email Templates</h3>
+                <p>Designing custom, high-converting premium Mailchimp templates and automation flows (Welcome Series, Abandoned Cart) tailored for business growth.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-window-restore"></i>
-                <h3>Sign-up Forms & Templates</h3>
-                <p>Designing high-converting multi-step sign-up forms, pop-ups, and custom, eye-catching email templates that look stunning on any device.</p>
+                <h3>Sign-up Forms & Pop-ups</h3>
+                <p>Designing high-converting multi-step sign-up forms, pop-ups, and custom, eye-catching layouts in Klaviyo and Mailchimp to capture more leads.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-magnifying-glass-chart"></i>
                 <h3>SEO & Lead Generation</h3>
-                <p>Driving target traffic and building high-quality email subscriber lists using strategic Pinterest SEO, keyword research, and optimization.</p>
+                <p>Driving targeted traffic and building high-quality email subscriber lists using strategic Pinterest SEO, keyword research, and page optimization.</p>
             </div>
         </div>
     </section>
