@@ -89,10 +89,10 @@
             padding: 140px 20px 60px 20px;
         }
 
-        /* Fixed Landscape Image Frame - Anti stretch style */
+        /* Fixed Image Frame - Adjusted for perfect centering */
         .hero-img-box {
-            width: 280px; 
-            height: 190px; 
+            width: 320px; 
+            height: 210px; 
             border-radius: 20px;
             overflow: hidden; 
             border: 3px solid #6366f1; 
@@ -105,8 +105,8 @@
         .hero-img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Keeps aspect ratio safe */
-            object-position: center top; /* Keeps face centered */
+            object-fit: cover; 
+            object-position: center 15%; /* Custom adjustment to pull face down into framework */
         }
 
         .hero h1 {
@@ -258,7 +258,7 @@
         @media (max-width: 768px) {
             header { padding: 15px 20px; }
             nav { display: none; }
-            .hero-img-box { width: 240px; height: 165px; }
+            .hero-img-box { width: 280px; height: 185px; }
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1rem; }
         }
