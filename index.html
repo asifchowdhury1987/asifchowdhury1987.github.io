@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asif Chowdhury | Email Marketing Specialist</title>
+    <title>Asif Chowdhury | Email Marketing & Landing Page Specialist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Modern Design System & Variables */
         :root {
             --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-card: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.08);
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --accent-glow: linear-gradient(90deg, #6366f1, #a855f7);
@@ -40,7 +41,7 @@
             transform: translateX(-50%);
             width: 92%;
             max-width: 1200px;
-            background: var(--glass-bg);
+            background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
@@ -89,7 +90,7 @@
             text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
         }
 
-        /* Order Now Button Style (Amir Hamza Style) */
+        /* Order Now Button */
         .order-btn {
             background: var(--btn-glow);
             color: white;
@@ -183,8 +184,8 @@
 
         /* Section Global Settings */
         .section {
-            padding: 100px 5%;
-            max-width: 1200px;
+            padding: 80px 5%;
+            max-width: 1240px;
             margin: 0 auto;
         }
 
@@ -209,71 +210,77 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
         }
 
-        /* Glassmorphism Cards */
-        .card {
-            background: var(--glass-bg);
+        /* Premium Portfolio Cards */
+        .portfolio-card {
+            background: var(--glass-card);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: left;
-            transition: all 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(168, 85, 247, 0.4);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        /* Portfolio Section Specific Custom Design */
-        .portfolio-card {
-            padding: 0;
+            border-radius: 24px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(168, 85, 247, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(99, 102, 241, 0.2);
         }
 
         .portfolio-img-box {
             width: 100%;
-            height: 200px;
-            background: #1e293b;
+            height: 220px;
             overflow: hidden;
             position: relative;
+            background: #0f172a;
+            border-bottom: 1px solid var(--glass-border);
         }
 
-        /* Placeholder image graphics or screenshot text */
-        .portfolio-img-box .placeholder-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--text-secondary);
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.6s ease;
         }
 
-        .portfolio-img-box .placeholder-text i {
-            font-size: 2rem;
-            margin-bottom: 0;
+        /* Hover effect: chobi slow scroll up hobe */
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.05);
         }
 
         .portfolio-info {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .tag {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
         }
 
         .portfolio-info h3 {
             font-size: 1.3rem;
             margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--text-primary);
         }
 
         .portfolio-info p {
@@ -290,13 +297,32 @@
             font-size: 0.95rem;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            margin-top: auto;
             transition: 0.3s;
         }
 
         .preview-link:hover {
             color: #a855f7;
             text-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+        }
+
+        /* Expertise Cards Style */
+        .card {
+            background: var(--glass-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: left;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(168, 85, 247, 0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .card i {
@@ -315,7 +341,7 @@
         }
 
         .contact-list li {
-            background: var(--glass-bg);
+            background: var(--glass-card);
             border: 1px solid var(--glass-border);
             padding: 15px 25px;
             border-radius: 15px;
@@ -380,52 +406,74 @@
             <img src="ASIF CHOWDHURY (1).jpg" alt="Asif Chowdhury" class="hero-img">
         </div>
         <h1>Hi, I'm <span>Asif Chowdhury</span></h1>
-        <p>Freelance Digital Marketer & Email Marketing Specialist. I help e-commerce brands and businesses grow their revenue through premium Mailchimp & Klaviyo automations, high-converting sign-up forms, and strategic landing pages.</p>
+        <p>Freelance Digital Marketer & Email Marketing Specialist. I help e-commerce brands and businesses grow their revenue through premium Mailchimp & Klaviyo automations, high-converting sign-up forms, and AI-driven high-converting landing pages.</p>
         <a href="#contact" class="btn">Grow Your Business</a>
     </section>
 
     <section class="section" id="portfolio">
         <h2 class="section-title">My Work Portfolio</h2>
         <div class="grid">
+            
             <div class="card portfolio-card">
                 <div class="portfolio-img-box">
-                    <div class="placeholder-text">
-                        <i class="fa-solid fa-envelope-open-text"></i>
-                        <span>Mailchimp Project</span>
-                    </div>
+                    <img src="assets/apple-landing-page.png" alt="Apple Landing Page" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
-                    <h3>E-commerce Newsletter Design</h3>
-                    <p>Designed a custom premium and responsive HTML email template for an online retail brand to promote seasonal sales.</p>
+                    <div class="tag">AI Design / Mailchimp</div>
+                    <h3>Apple Premium Landing Page</h3>
+                    <p>An ultra-minimalist and high-converting product landing page designed with advanced layout planning and automated flows.</p>
                     <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+
             <div class="card portfolio-card">
                 <div class="portfolio-img-box">
-                    <div class="placeholder-text">
-                        <i class="fa-solid fa-window-restore"></i>
-                        <span>Klaviyo Form Project</span>
-                    </div>
+                    <img src="assets/clickup-landing-page.png" alt="ClickUp Landing Page" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
-                    <h3>High-Converting Pop-up Form</h3>
-                    <p>Created a multi-step optimized sign-up pop-up form in Klaviyo that increased the client's lead generation list by 25%.</p>
+                    <div class="tag">SaaS / Klaviyo Form</div>
+                    <h3>ClickUp SaaS Landing Page</h3>
+                    <p>A high-converting tech/SaaS style conversion template integrated with multi-step subscription pop-ups.</p>
                     <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+
             <div class="card portfolio-card">
                 <div class="portfolio-img-box">
-                    <div class="placeholder-text">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        <span>SEO/Pinterest Project</span>
-                    </div>
+                    <img src="assets/grammarly-landing-page.png" alt="Grammarly Landing Page" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
-                    <h3>First Aid Service Landing Page</h3>
-                    <p>Developed a custom high-converting strategic landing page integrated with advanced keyword research and lead capture.</p>
+                    <div class="tag">AI UX / Lead Gen</div>
+                    <h3>Grammarly Redesign Concept</h3>
+                    <p>Clean, focused UX copywriting layout built for capturing leads with a high conversion rate optimized structure.</p>
                     <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
+
+            <div class="card portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="assets/airtable-landing-page.png" alt="Airtable Landing Page" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <div class="tag">Web Design / SEO</div>
+                    <h3>Airtable Strategic Layout</h3>
+                    <p>A modern layout planned around keyword optimization and user intent to maximize organic sign-ups.</p>
+                    <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="card portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="assets/webfx-landing-page.png" alt="WebFX Landing Page" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <div class="tag">Digital Marketing</div>
+                    <h3>WebFX Modern Agency Page</h3>
+                    <p>A high-end service showcase landing page optimized for lead generation, Pinterest campaigns, and target audiences.</p>
+                    <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
         </div>
     </section>
 
