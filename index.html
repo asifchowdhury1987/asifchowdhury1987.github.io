@@ -14,6 +14,7 @@
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --accent-glow: linear-gradient(90deg, #6366f1, #a855f7);
+            --btn-glow: linear-gradient(90deg, #3b82f6, #8b5cf6);
         }
 
         * {
@@ -37,13 +38,13 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 90%;
+            width: 92%;
             max-width: 1200px;
             background: var(--glass-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
-            padding: 15px 30px;
+            padding: 12px 30px;
             border-radius: 50px;
             display: flex;
             justify-content: space-between;
@@ -64,10 +65,20 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
         nav a {
             color: var(--text-primary);
             text-decoration: none;
-            margin-left: 25px;
+            margin-right: 25px;
             font-size: 0.95rem;
             transition: 0.3s;
             opacity: 0.8;
@@ -76,6 +87,28 @@
         nav a:hover {
             opacity: 1;
             text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+        }
+
+        /* Order Now Button Style (Amir Hamza Style) */
+        .order-btn {
+            background: var(--btn-glow);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .order-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.7);
         }
 
         /* Hero Section */
@@ -89,7 +122,6 @@
             padding: 140px 20px 60px 20px;
         }
 
-        /* Fixed Image Frame - Adjusted for perfect centering */
         .hero-img-box {
             width: 320px; 
             height: 210px; 
@@ -106,7 +138,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover; 
-            object-position: center 15%; /* Custom adjustment to pull face down into framework */
+            object-position: center 15%; 
         }
 
         .hero h1 {
@@ -131,7 +163,6 @@
             line-height: 1.6;
         }
 
-        /* Premium Gradient CTA Button */
         .btn {
             background: var(--accent-glow);
             color: white;
@@ -150,7 +181,7 @@
             box-shadow: 0 8px 25px rgba(168, 85, 247, 0.6);
         }
 
-        /* Work / Showcase Section */
+        /* Section Global Settings */
         .section {
             padding: 100px 5%;
             max-width: 1200px;
@@ -200,23 +231,80 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
+        /* Portfolio Section Specific Custom Design */
+        .portfolio-card {
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-img-box {
+            width: 100%;
+            height: 200px;
+            background: #1e293b;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Placeholder image graphics or screenshot text */
+        .portfolio-img-box .placeholder-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .portfolio-img-box .placeholder-text i {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+
+        .portfolio-info {
+            padding: 25px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .preview-link {
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+
+        .preview-link:hover {
+            color: #a855f7;
+            text-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+        }
+
         .card i {
             font-size: 2.5rem;
             background: var(--accent-glow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
         }
 
         /* Contact Section List */
@@ -255,8 +343,12 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 992px) {
+            nav a { margin-right: 15px; }
+        }
+
         @media (max-width: 768px) {
-            header { padding: 15px 20px; }
+            header { padding: 12px 20px; width: 95%; }
             nav { display: none; }
             .hero-img-box { width: 280px; height: 185px; }
             .hero h1 { font-size: 2.5rem; }
@@ -272,11 +364,15 @@
                 <span class="logo-text">Asif Chowdhury</span>
             </a>
         </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="header-right">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#" target="_blank" class="order-btn">Order Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
     </header>
 
     <section class="hero" id="home">
@@ -286,6 +382,51 @@
         <h1>Hi, I'm <span>Asif Chowdhury</span></h1>
         <p>Freelance Digital Marketer & Email Marketing Specialist. I help e-commerce brands and businesses grow their revenue through premium Mailchimp & Klaviyo automations, high-converting sign-up forms, and strategic landing pages.</p>
         <a href="#contact" class="btn">Grow Your Business</a>
+    </section>
+
+    <section class="section" id="portfolio">
+        <h2 class="section-title">My Work Portfolio</h2>
+        <div class="grid">
+            <div class="card portfolio-card">
+                <div class="portfolio-img-box">
+                    <div class="placeholder-text">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        <span>Mailchimp Project</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>E-commerce Newsletter Design</h3>
+                    <p>Designed a custom premium and responsive HTML email template for an online retail brand to promote seasonal sales.</p>
+                    <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="card portfolio-card">
+                <div class="portfolio-img-box">
+                    <div class="placeholder-text">
+                        <i class="fa-solid fa-window-restore"></i>
+                        <span>Klaviyo Form Project</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>High-Converting Pop-up Form</h3>
+                    <p>Created a multi-step optimized sign-up pop-up form in Klaviyo that increased the client's lead generation list by 25%.</p>
+                    <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="card portfolio-card">
+                <div class="portfolio-img-box">
+                    <div class="placeholder-text">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <span>SEO/Pinterest Project</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>First Aid Service Landing Page</h3>
+                    <p>Developed a custom high-converting strategic landing page integrated with advanced keyword research and lead capture.</p>
+                    <a href="#" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="section" id="services">
