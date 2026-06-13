@@ -145,7 +145,7 @@
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             animation: fadeInDown 1s ease 0.2s both;
         }
 
@@ -155,14 +155,23 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Honest & Simple Hero Description */
+        /* Added Subtitle from your recommendation */
+        .hero-subtitle {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #818cf8;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease 0.3s both;
+        }
+
+        /* Clean, Professional & Honest Hero Description */
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--text-secondary);
-            max-width: 700px;
-            margin-bottom: 30px;
+            max-width: 800px;
+            margin-bottom: 35px;
             animation: fadeInUp 1s ease 0.4s both;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .btn {
@@ -378,6 +387,7 @@
             nav { display: none; }
             .hero-img-box { width: 280px; height: 185px; }
             .hero h1 { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.1rem; }
             .hero p { font-size: 1rem; }
         }
     </style>
@@ -406,7 +416,11 @@
             <img src="ASIF CHOWDHURY (1).jpg" alt="Asif Chowdhury" class="hero-img">
         </div>
         <h1>Hi, I'm <span>Asif Chowdhury</span></h1>
-        <p>Mailchimp Landing Page & Email Marketing Specialist. I design responsive landing pages, email templates, and sign-up forms that help businesses capture leads and grow their audience.</p>
+        
+        <div class="hero-subtitle">Email Marketing, Lead Generation & Landing Page Specialist</div>
+        
+        <p>I help businesses grow their audience, generate leads, and improve customer engagement through Mailchimp and Klaviyo email marketing, landing page design, sign-up forms, automations, and Canva-based marketing assets.</p>
+        
         <a href="#contact" class="btn">Grow Your Business</a>
     </section>
 
