@@ -216,6 +216,11 @@
             height: 100%;
             object-fit: cover;
         }
+        
+        /* WebFX কার্ডের ছবিকে ওপরের ব্যানার দেখানোর জন্য সেটিংস */
+        .webfx-img {
+            object-position: top center !important;
+        }
 
         .portfolio-info {
             padding: 25px;
@@ -354,17 +359,19 @@
                 </div>
             </div>
 
-            <!-- Project 2: WebFX (NEW) -->
+            <!-- Project 2: WebFX -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="webfx-card.png" alt="WebFX Landing Page" class="portfolio-img">
+                    <!-- এখানে ব্যানার ফোকাস করার কোড দেওয়া হয়েছে -->
+                    <img src="webfx-card.png" alt="WebFX Landing Page" class="portfolio-img webfx-img">
                 </div>
                 <div class="portfolio-info">
                     <h3>WebFX Digital Marketing Landing Page</h3>
                     <div class="tag">Agency Project</div>
                     <p>A high-converting digital marketing landing page built to drive revenue and maximize lead generation. Featuring clean custom service blocks, trust signals, and an optimized consultation form layout.</p>
                     <div class="tools-used">Tools Used: Mailchimp, Canva</div>
-                    <a href="webfx-full.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <!-- এখানে লিংক সংশোধন করে .png করা হয়েছে -->
+                    <a href="webfx-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
