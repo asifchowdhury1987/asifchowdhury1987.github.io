@@ -48,4 +48,497 @@
             border-radius: 50px;
             display: flex;
             justify-content: space-between;
-            alignNormally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: var(--accent-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            opacity: 0.8;
+        }
+
+        nav a:hover { 
+            opacity: 1; 
+            color: #818cf8;
+        }
+
+        .order-btn {
+            background: var(--btn-glow);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .order-btn:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 160px 20px 60px 20px;
+        }
+
+        .hero-img-box {
+            width: 180px; 
+            height: 180px; 
+            border-radius: 50%;
+            overflow: hidden; 
+            border: 3px solid #6366f1; 
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.4); 
+            margin-bottom: 25px;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            background: var(--accent-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #818cf8;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            background: var(--accent-glow);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+
+        .btn:hover { transform: translateY(-3px); }
+
+        /* Portfolio Section Layout */
+        .section {
+            padding: 60px 5% 20px 5%;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+        }
+
+        .portfolio-card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: 0.4s;
+        }
+
+        .portfolio-card:hover { transform: translateY(-12px); }
+
+        .portfolio-img-box {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background: #1e1e38;
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .top-focus-img {
+            object-position: top center !important;
+        }
+
+        .portfolio-info {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .tag {
+            align-self: flex-start;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .portfolio-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tools-used {
+            font-size: 0.85rem;
+            color: #a855f7;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .preview-link {
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        .card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            background: var(--accent-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .contact-list {
+            list-style: none;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-list li {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            padding: 15px 25px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-list i { margin-right: 20px; color: #6366f1; }
+
+        @media (max-width: 768px) {
+            header { padding: 12px 20px; }
+            nav { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header Navigation -->
+    <header>
+        <div class="header-left">
+            <span class="logo-text">Asif Chowdhury</span>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#" target="_blank" class="order-btn">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-img-box">
+            <img src="ASIF CHOWDHURY (1).jpg" alt="Asif Chowdhury" class="hero-img">
+        </div>
+        <h1>Hi, I'm <span>Asif Chowdhury</span></h1>
+        <div class="hero-subtitle">Email Marketing, Lead Generation & Landing Page Specialist</div>
+        <p>I help businesses grow their audience, generate leads, and improve customer engagement through Mailchimp and Klaviyo email marketing, landing page design, sign-up forms, automations, and Canva-based marketing assets.</p>
+        <a href="#contact" class="btn">Grow Your Business</a>
+    </section>
+
+    <!-- Portfolio Section - Landing Pages -->
+    <section class="section" id="portfolio">
+        <h2 class="section-title">Landing Page Design Portfolio</h2>
+        <div class="grid">
+            
+            <!-- Project 1: Apple -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="apple-card.png" alt="Apple Landing Page" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Apple-Inspired Premium Product Landing Page</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A clean and modern landing page concept inspired by Apple's minimalist hardware showcase. Created in Mailchimp to demonstrate premium product landing page structure, high-end visual blocks, and conversion-focused signup form design.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="apple-full.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2: WebFX -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="webfx-card.png" alt="WebFX Landing Page" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>WebFX-Inspired Digital Marketing Landing Page</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A clean and modern landing page concept inspired by WebFX's data-driven marketing architecture. Created in Mailchimp to demonstrate agency landing page structure, service-highlighting layout, and conversion-focused signup form design.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="webfx-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3: WriteWise -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="writewise-card.png" alt="WriteWise Landing Page" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>WriteWise-Inspired AI SaaS Landing Page</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A clean and modern landing page concept inspired by WriteWise's artificial intelligence content assistant. Created in Mailchimp to demonstrate tech SaaS landing page structure, multi-tiered benefit layouts, and conversion-focused signup form design.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="writewise-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 4: Notion/TaskFlow -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="taskflow-card.png" alt="Notion Inspired Landing Page" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Notion-Inspired No-Code Workflow Landing Page</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A clean and modern landing page concept inspired by Notion's no-code workflow and database platform. Created in Mailchimp to demonstrate SaaS landing page structure, feature-block layout, and conversion-focused signup form design.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="taskflow-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 5: NovaChain Crypto -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="novachain-landing.jpg" alt="NovaChain Crypto Landing Page" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>NovaChain-Inspired Crypto & DeFi Landing Page</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A clean and modern landing page concept inspired by NovaChain's cryptocurrency and decentralized finance (DeFi) platform. Created to demonstrate Web3 SaaS landing page structure, metric-highlighting data blocks, roadmaps, and conversion-focused early access signup form design.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="novachain-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 6: BlockRise Crypto Presale -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="blockrise-landing.jpg" alt="BlockRise Crypto Landing Page" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>BlockRise Crypto Presale Landing Page</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>Crypto presale landing page concept designed in Mailchimp with a focus on lead generation, investor trust, and conversion-focused layout.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="blockrise-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Portfolio Section - Email Templates -->
+    <section class="section">
+        <h2 class="section-title">Email Template Design Portfolio</h2>
+        <div class="grid">
+
+            <!-- Email Project 1: CryptoPulse -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="cryptopulse-email.jpg" alt="CryptoPulse Newsletter Email Design" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>CryptoPulse Newsletter Email Design</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A modern crypto newsletter email designed in Mailchimp to showcase email marketing, content layout, market updates, and subscriber engagement strategies for blockchain and cryptocurrency audiences.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="cryptopulse-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Email Project 2: LunaWear Welcome Email -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="lunawear-email.jpg" alt="LunaWear Welcome Email Template" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>LunaWear Welcome Email Template</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A welcome email template designed in Mailchimp for a fictional fashion brand. This project focuses on subscriber onboarding, first-purchase incentives, product promotion, and conversion-focused email design.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="lunawear-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Email Project 3: NovaStyle Abandoned Cart Email -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="novastyle-email.jpg" alt="NovaStyle Abandoned Cart Email Template" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>NovaStyle Abandoned Cart Email Template</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>An abandoned cart email template designed in Mailchimp for a fictional fashion brand. This project focuses on shopping cart recovery, customer re-engagement, cart abandonment incentives, and strategic product presentation.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="novastyle-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Email Project 4: GlowAura Beauty Sale Email -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="glowaura-email.jpg" alt="GlowAura Beauty Sale Email Templates" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>GlowAura Beauty Sale Email Templates</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A promotional sale email designed in Mailchimp for a fictional beauty brand. This project focuses on seasonal promotions, product showcasing, customer engagement, and conversion-focused email marketing design. GlowAura is a fictional beauty brand created for portfolio and practice purposes. This concept project was developed to demonstrate email marketing and Mailchimp design capabilities.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="glowaura-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Email Project 5: TaskFlow Product Launch Email -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="taskflow-email.jpg" alt="TaskFlow Product Launch Email" class="portfolio-img top-focus-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>TaskFlow Product Launch Email</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A SaaS product launch email designed in Mailchimp to showcase feature announcements, product updates, user engagement strategies, and conversion-focused email marketing design for software businesses. TaskFlow is a fictional SaaS brand created for portfolio and practice purposes.</p>
+                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
+                    <a href="taskflow-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">Expertise & Services</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <h3>Mailchimp Email Templates</h3>
+                <p>Clean and professional email templates designed for newsletters, promotions, and email campaigns.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-window-restore"></i>
+                <h3>Sign-up Forms & Pop-ups</h3>
+                <p>Custom Mailchimp and Klaviyo forms designed to collect leads and grow email subscriber lists.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h3>Landing Page Design</h3>
+                <p>Responsive landing pages designed in Mailchimp for lead generation and product promotion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Let's Work Together</h2>
+        <ul class="contact-list">
+            <li><i class="fa-solid fa-envelope"></i> asifchowdhury914@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</li>
+        </ul>
+    </section>
+
+</body>
+</html>
