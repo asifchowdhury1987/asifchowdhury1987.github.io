@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asif | Email Marketing & Lead Generation Specialist</title>
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
-            --glass-card: rgba(255, 255, 255, 0.05);
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #2e1065 100%);
+            --glass-card: rgba(255, 255, 255, 0.03);
             --glass-border: rgba(255, 255, 255, 0.08);
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --accent-orange: #ff6b35;
             --accent-glow: linear-gradient(90deg, #6366f1, #a855f7);
-            --btn-glow: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            --btn-glow: linear-gradient(90deg, #ff6b35, #ff8c42);
         }
 
         * {
@@ -33,7 +32,7 @@
             overflow-x: hidden;
         }
 
-        /* Fixed Premium Header */
+        /* Fixed Navigation Header */
         header {
             position: fixed;
             top: 20px;
@@ -41,7 +40,7 @@
             transform: translateX(-50%);
             width: 92%;
             max-width: 1200px;
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
@@ -51,21 +50,17 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
         }
 
         .logo-text {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            background: var(--accent-glow);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
         }
 
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 25px;
+        .logo-text span {
+            color: var(--accent-orange);
         }
 
         nav {
@@ -78,89 +73,88 @@
             color: var(--text-primary);
             text-decoration: none;
             font-size: 0.95rem;
+            font-weight: 500;
             transition: 0.3s;
             opacity: 0.8;
         }
 
         nav a:hover { 
             opacity: 1; 
-            color: #818cf8;
+            color: var(--accent-orange);
         }
 
-        .order-btn {
+        .nav-btn {
             background: var(--btn-glow);
             color: white;
-            padding: 10px 22px;
+            padding: 10px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.85rem;
             transition: 0.3s;
             white-space: nowrap;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
         }
 
-        .order-btn:hover { 
-            transform: scale(1.05); 
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+        .nav-btn:hover { 
+            transform: scale(1.03); 
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
         }
 
-        /* Hero & About Specialist Section (Merged for Premium Visuals) */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 160px 20px 60px 20px;
-            max-width: 1000px;
+            padding: 150px 20px 60px 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .about-box {
-            background: rgba(20, 20, 35, 0.6);
+            background: rgba(15, 23, 42, 0.45);
             border: 1px solid var(--glass-border);
             border-radius: 30px;
-            padding: 45px;
+            padding: 50px;
             width: 100%;
-            text-align: left;
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-            position: relative;
         }
 
-        .about-title {
+        .about-tag {
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--accent-orange);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-weight: 700;
         }
 
-        .about-box h1 {
-            font-size: 3rem;
+        .main-headline {
+            font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--accent-orange);
-            padding-bottom: 15px;
+            line-height: 1.3;
+            margin-bottom: 40px;
+            color: #ffffff;
         }
 
         .profile-container {
             display: flex;
-            gap: 35px;
+            gap: 40px;
             align-items: flex-start;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 35px;
         }
 
         .avatar-circle {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: var(--accent-orange);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 800;
             color: white;
             flex-shrink: 0;
@@ -168,67 +162,141 @@
         }
 
         .profile-details h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 5px;
         }
 
         .profile-tagline {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--accent-orange);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 600;
         }
 
         .profile-bio {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px 30px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 35px;
         }
 
         .skill-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 1.05rem;
-            color: var(--text-primary);
+            gap: 10px;
+            font-size: 1rem;
+            color: #e2e8f0;
         }
 
         .skill-item i {
             color: var(--accent-orange);
-            font-size: 0.85rem;
+            font-size: 0.65rem;
         }
 
-        /* Portfolio Section Layout */
+        .hero-cta-btn {
+            display: inline-block;
+            background: var(--btn-glow);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: 0.3s;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .hero-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.6);
+        }
+
+        /* Results Display Section */
+        .results-section {
+            padding: 60px 20px;
+            background: rgba(15, 23, 42, 0.3);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            margin-bottom: 40px;
+        }
+
+        .results-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .results-section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 800;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .result-card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .result-card:hover {
+            border-color: rgba(255, 107, 53, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .result-card h3 {
+            font-size: 3rem;
+            color: var(--accent-orange);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .result-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        /* Content Sections Layout */
         .section {
-            padding: 80px 5% 40px 5%;
+            padding: 70px 4% 40px 4%;
             max-width: 1240px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
             position: relative;
+            font-weight: 800;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -12px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 70px;
             height: 4px;
-            background: var(--accent-glow);
+            background: var(--accent-orange);
             border-radius: 2px;
         }
 
@@ -249,8 +317,8 @@
         }
 
         .portfolio-card:hover { 
-            transform: translateY(-12px);
-            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.18);
             box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
 
@@ -258,7 +326,7 @@
             width: 100%;
             height: 260px;
             overflow: hidden;
-            background: #1e1e38;
+            background: #14142b;
             position: relative;
         }
 
@@ -266,10 +334,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-        
-        .top-focus-img {
-            object-position: top center !important;
+            object-position: top center;
         }
 
         .portfolio-info {
@@ -284,24 +349,38 @@
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            background: rgba(255, 107, 53, 0.15);
+            background: rgba(255, 107, 53, 0.12);
             color: var(--accent-orange);
             padding: 4px 12px;
             border-radius: 20px;
             margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
 
         .portfolio-info h3 {
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             margin-bottom: 8px;
-            color: var(--text-primary);
+            color: #ffffff;
+            font-weight: 700;
         }
 
         .portfolio-info p {
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Metrics Display Badge inside Cards */
+        .card-metrics-badge {
+            background: rgba(255, 107, 53, 0.08);
+            border-left: 3px solid var(--accent-orange);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
         .tools-used {
@@ -314,7 +393,7 @@
         .preview-links-holder {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
             margin-top: auto;
         }
 
@@ -338,76 +417,100 @@
             color: #0f172a;
         }
 
-        /* Services & Contact Visuals */
+        /* Specializations Styling */
         .card {
             background: var(--glass-card);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 35px;
             transition: 0.3s;
         }
 
-        .card:hover { transform: translateY(-5px); }
+        .card:hover { 
+            transform: translateY(-5px); 
+            border-color: rgba(255, 107, 53, 0.3);
+        }
 
         .card i {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: var(--accent-orange);
             margin-bottom: 20px;
         }
 
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer / Contact Details */
         .contact-list {
             list-style: none;
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
+            text-align: center;
         }
 
         .contact-list li {
             background: var(--glass-card);
             border: 1px solid var(--glass-border);
             padding: 18px 25px;
-            border-radius: 15px;
+            border-radius: 20px;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
+            justify-content: center;
             font-size: 1.1rem;
+            font-weight: 500;
         }
 
-        .contact-list i { margin-right: 20px; color: var(--accent-orange); font-size: 1.3rem; }
+        .contact-list i { 
+            margin-right: 15px; 
+            color: var(--accent-orange); 
+            font-size: 1.2rem; 
+        }
+
+        .global-coverage-text {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
 
         @media (max-width: 768px) {
-            header { padding: 12px 20px; }
+            header { padding: 12px 20px; width: 95%; }
             nav { display: none; }
             .profile-container { flex-direction: column; align-items: center; text-align: center; }
             .skills-grid { grid-template-columns: 1fr; justify-items: center; }
-            .about-box h1 { font-size: 2.2rem; text-align: center; }
-            .section-title { font-size: 2rem; }
+            .main-headline { font-size: 1.9rem; text-align: center; }
+            .section-title { font-size: 1.9rem; }
+            .hero { padding-top: 120px; }
+            .about-box { padding: 30px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation Header -->
     <header>
         <div class="header-left">
-            <span class="logo-text">Asif Chowdhury</span>
+            <div class="logo-text">Asif <span>Chowdhury</span></div>
         </div>
         <div class="header-right">
             <nav>
                 <a href="#home">About</a>
+                <a href="#portfolio-email">Email Marketing</a>
                 <a href="#portfolio-landing">Landing Pages</a>
-                <a href="#portfolio-email">Email Templates</a>
-                <a href="#services">Services</a>
+                <a href="#services">Specializations</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <a href="#contact" class="order-btn">Hire Me</a>
+            <a href="#contact" class="nav-btn">Get Free Audit →</a>
         </div>
     </header>
 
-    <!-- Hero / About the Specialist Section -->
     <section class="hero" id="home">
         <div class="about-box">
-            <div class="about-title">About The Specialist</div>
-            <h1>Hi, I'm Asif</h1>
+            <div class="about-tag">About The Specialist</div>
+            <h1 class="main-headline">I Help Shopify Stores & Crypto Projects Make More Revenue Through Email — Without Spending More on Ads</h1>
             
             <div class="profile-container">
                 <div class="avatar-circle">A</div>
@@ -416,7 +519,6 @@
                     <div class="profile-tagline">Email Marketing Specialist — E-commerce and Crypto/Web3</div>
                     <p class="profile-bio">I help Shopify store owners and crypto projects build email systems that generate revenue on autopilot — without spending more on ads. Every email I write is designed to feel human, build trust, and convert.</p>
                     
-                    <!-- Bullet Points from Screenshot 1 + Lead Generation Included -->
                     <div class="skills-grid">
                         <div class="skill-item"><i class="fa-solid fa-circle"></i> Klaviyo specialist</div>
                         <div class="skill-item"><i class="fa-solid fa-circle"></i> Mailchimp expert</div>
@@ -426,212 +528,132 @@
                         <div class="skill-item"><i class="fa-solid fa-circle"></i> Crypto and Web3 emails</div>
                         <div class="skill-item"><i class="fa-solid fa-circle"></i> Lead Generation</div>
                     </div>
+
+                    <a href="#contact" class="hero-cta-btn">Get a Free Email Audit →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section - Landing Pages -->
-    <section class="section" id="portfolio-landing">
-        <h2 class="section-title">Landing Page Designs</h2>
-        <div class="grid">
-            
-            <!-- Project: Apple -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="apple-card.png" alt="Apple Landing Page" class="portfolio-img top-focus-img">
+    <section class="results-section">
+        <div class="results-container">
+            <h2>Results I've Generated</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>53%</h3>
+                    <p>Average Open Rate</p>
                 </div>
-                <div class="portfolio-info">
-                    <h3>Apple-Inspired Premium Product Landing Page</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>A clean and minimalist landing page design focused on premium hardware showcase, clear technical value blocks, and optimized lead-capture forms.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
-                    <div class="preview-links-holder">
-                        <a href="apple-full.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
+                <div class="result-card">
+                    <h3>$3,200</h3>
+                    <p>Revenue in 30 Days</p>
                 </div>
-            </div>
-
-            <!-- Project: WebFX -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="webfx-card.png" alt="WebFX Landing Page" class="portfolio-img top-focus-img">
+                <div class="result-card">
+                    <h3>28%</h3>
+                    <p>Cart Recovery Rate</p>
                 </div>
-                <div class="portfolio-info">
-                    <h3>WebFX-Inspired Agency Landing Page</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>Data-driven corporate marketing layout structured to display multi-tiered agency services, visual dynamic blocks, and absolute lead acquisition optimization.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
-                    <div class="preview-links-holder">
-                        <a href="webfx-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
+                <div class="result-card">
+                    <h3>100%</h3>
+                    <p>Client Satisfaction</p>
                 </div>
             </div>
-
-            <!-- Project: WriteWise -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="writewise-card.png" alt="WriteWise Landing Page" class="portfolio-img top-focus-img">
-                </div>
-                <div class="portfolio-info">
-                    <h3>WriteWise AI SaaS Landing Page</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>Modern tech software-as-a-service interface built with clear feature grids, subscription plans, and high-converting modern lead capturing components.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
-                    <div class="preview-links-holder">
-                        <a href="writewise-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: Notion/TaskFlow -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="taskflow-card.png" alt="TaskFlow Landing Page" class="portfolio-img top-focus-img">
-                </div>
-                <div class="portfolio-info">
-                    <h3>Notion-Inspired TaskFlow SaaS Landing Page</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>Minimalistic workflow software application interface optimizing feature adoption layouts and simple high-response registration systems.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
-                    <div class="preview-links-holder">
-                        <a href="taskflow-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: NovaChain -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="novachain-landing.jpg" alt="NovaChain Crypto Landing Page" class="portfolio-img top-focus-img">
-                </div>
-                <div class="portfolio-info">
-                    <h3>NovaChain Crypto & DeFi Landing Page</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>High-end Web3 crypto asset interface demonstrating investment roadmaps, tokens distribution charts, and interactive early access registration blocks.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
-                    <div class="preview-links-holder">
-                        <a href="novachain-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project: BlockRise -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="blockrise-landing.jpg" alt="BlockRise Presale Landing Page" class="portfolio-img top-focus-img">
-                </div>
-                <div class="portfolio-info">
-                    <h3>BlockRise Crypto Presale Landing Page</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>Designed with intense conversion priority to generate investor leads, showcase token trust badges, and drive rapid immediate action subscriptions.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Canva</div>
-                    <div class="preview-links-holder">
-                        <a href="blockrise-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Portfolio Section - Email Templates -->
     <section class="section" id="portfolio-email">
         <h2 class="section-title">Email Marketing Campaigns</h2>
         <div class="grid">
 
-            <!-- Premium Case Study Project: PawBliss -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="pawbliss-case-study.jpg" alt="PawBliss E-commerce Campaign" class="portfolio-img top-focus-img">
+                    <img src="pawbliss-case-study.jpg" alt="PawBliss Flow Setup" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
                     <h3>PawBliss Automated Email Flow Campaign</h3>
                     <div class="tag">E-commerce Case Study</div>
-                    <p>An advanced multi-flow e-commerce strategy tracking exactly how 3 strategic automated sequences successfully generated $3,280 within a brief 30-day timeline.</p>
-                    <div class="tools-used">Tools Used: Klaviyo / Mailchimp, Marketing Strategy</div>
+                    <p>An advanced multi-flow e-commerce strategy tracking exactly how 3 strategic automated sequences successfully generated outstanding sales within a brief 30-day timeline.</p>
+                    
+                    <div class="card-metrics-badge">
+                        Open Rate: 52% | Revenue: $3,200
+                    </div>
+
+                    <div class="tools-used">Tools: Klaviyo / Mailchimp, Marketing Strategy</div>
                     <div class="preview-links-holder">
-                        <a href="pawbliss-welcome.jpg" target="_blank" class="preview-link"><i class="fa-solid fa-envelope"></i> Welcome Flow</a>
-                        <a href="pawbliss-abandoned.jpg" target="_blank" class="preview-link"><i class="fa-solid fa-cart-shopping"></i> Abandoned Cart</a>
-                        <a href="pawbliss-post-purchase.jpg" target="_blank" class="preview-link"><i class="fa-solid fa-bag-shopping"></i> Post-Purchase</a>
+                        <a href="email1-welcome.png" target="_blank" class="preview-link"><i class="fa-solid fa-envelope"></i> Welcome</a>
+                        <a href="email2-abandoned.jpg" target="_blank" class="preview-link"><i class="fa-solid fa-cart-shopping"></i> Abandoned</a>
+                        <a href="email3-post-purchase..jpg" target="_blank" class="preview-link"><i class="fa-solid fa-bag-shopping"></i> Post-Purchase</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Email Project: CryptoPulse -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="cryptopulse-email.jpg" alt="CryptoPulse Newsletter Design" class="portfolio-img top-focus-img">
-                </div>
-                <div class="portfolio-info">
-                    <h3>CryptoPulse Web3 Weekly Newsletter</h3>
-                    <div class="tag">Newsletter Flow</div>
-                    <p>Clean grid structure crafted for financial markets updates, community outreach, and continuous high click-through subscriber retention.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Graphic Design</div>
-                    <div class="preview-links-holder">
-                        <a href="cryptopulse-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Email Project: LunaWear -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="lunawear-email.jpg" alt="LunaWear Welcome Email" class="portfolio-img top-focus-img">
+                    <img src="lunawear-email.jpg" alt="LunaWear Welcome Onboarding" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
                     <h3>LunaWear Brand Onboarding Sequence</h3>
                     <div class="tag">Welcome Flow</div>
                     <p>Fashion brand onboarding newsletter prioritizing customer activation, distribution of welcoming incentive codes, and immediate product collections discovery.</p>
-                    <div class="tools-used">Tools Used: Klaviyo, Product Layout</div>
+                    <div class="tools-used">Tools: Klaviyo, Product Layout Design</div>
                     <div class="preview-links-holder">
                         <a href="lunawear-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Email Project: NovaStyle -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="novastyle-email.jpg" alt="NovaStyle Abandoned Cart" class="portfolio-img top-focus-img">
+                    <img src="novastyle-email.jpg" alt="NovaStyle Recovery Setup" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
                     <h3>NovaStyle Abandoned Cart Recovery Template</h3>
                     <div class="tag">Behavioral Flow</div>
                     <p>High-conversion behavioral email sequence recovering uncompleted shopping baskets through product blocks, social proofs, and urgency triggers.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Copywriting</div>
+                    <div class="tools-used">Tools: Mailchimp, Conversion Copywriting</div>
                     <div class="preview-links-holder">
                         <a href="novastyle-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Email Project: GlowAura -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="glowaura-email.jpg" alt="GlowAura Promotional Sale" class="portfolio-img top-focus-img">
+                    <img src="glowaura-email.jpg" alt="GlowAura Promotional Campaign" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
                     <h3>GlowAura Beauty Brand Promotional Blast</h3>
                     <div class="tag">Campaign Blast</div>
                     <p>Highly aesthetic skin-care visual email campaign tailored to drive seasonal revenue spikes, emphasizing clean branding alignments.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Branding</div>
+                    <div class="tools-used">Tools: Mailchimp, Visual Branding</div>
                     <div class="preview-links-holder">
                         <a href="glowaura-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Email Project: TaskFlow -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="taskflow-email.jpg" alt="TaskFlow Feature Release" class="portfolio-img top-focus-img">
+                    <img src="cryptopulse-email.jpg" alt="CryptoPulse Financial Flow" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>CryptoPulse Web3 Weekly Newsletter</h3>
+                    <div class="tag">Newsletter Flow</div>
+                    <p>Clean grid structure crafted for financial markets updates, community outreach, and continuous high click-through subscriber retention.</p>
+                    <div class="tools-used">Tools: Mailchimp, Crypto Marketing</div>
+                    <div class="preview-links-holder">
+                        <a href="cryptopulse-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="taskflow-email.jpg" alt="TaskFlow Broadcast" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
                     <h3>TaskFlow SaaS Feature Announcement</h3>
                     <div class="tag">Product Lifecycle</div>
                     <p>Product adoption broadcast structured to inform corporate users about application feature enhancements while maximizing call-to-action engagement.</p>
-                    <div class="tools-used">Tools Used: Mailchimp, Technical Writing</div>
+                    <div class="tools-used">Tools: Mailchimp, Tech Feature Layout</div>
                     <div class="preview-links-holder">
                         <a href="taskflow-email.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
@@ -641,7 +663,58 @@
         </div>
     </section>
 
-    <!-- Services Core Section -->
+    <section class="section" id="portfolio-landing">
+        <h2 class="section-title">Landing Page Designs</h2>
+        <div class="grid">
+            
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="taskflow-card.png" alt="Apple Concept Page" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Apple-Inspired Premium Hardware Showcase</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>A clean and minimalist landing page design focused on premium hardware showcase, clear technical value blocks, and optimized lead-capture forms.</p>
+                    <div class="tools-used">Tools: Mailchimp, Canva Design Elements</div>
+                    <div class="preview-links-holder">
+                        <a href="taskflow-card.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="novachain-landing.jpg" alt="WebFX Agency Layout" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>WebFX-Inspired High-Converting Corporate Agency Page</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>Data-driven corporate marketing layout structured to display multi-tiered agency services, visual dynamic blocks, and absolute lead acquisition optimization.</p>
+                    <div class="tools-used">Tools: Mailchimp, Layout Formatting</div>
+                    <div class="preview-links-holder">
+                        <a href="novachain-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="blockrise-landing.jpg" alt="WriteWise Interface Design" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>WriteWise AI Deep SaaS Product Sales Funnel</h3>
+                    <div class="tag">Concept Project</div>
+                    <p>Modern tech software-as-a-service interface built with clear feature grids, subscription plans, and high-converting modern lead capturing components.</p>
+                    <div class="tools-used">Tools: Mailchimp, Graphic Framing</div>
+                    <div class="preview-links-holder">
+                        <a href="blockrise-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section class="section" id="services">
         <h2 class="section-title">My Specializations</h2>
         <div class="grid">
@@ -663,12 +736,12 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section" id="contact">
         <h2 class="section-title">Start Your Campaign</h2>
         <ul class="contact-list">
             <li><i class="fa-solid fa-envelope"></i> asifchowdhury914@gmail.com</li>
             <li><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</li>
+            <div class="global-coverage-text"><i class="fa-solid fa-globe"></i> Serving clients in USA, UK, Canada & Australia</div>
         </ul>
     </section>
 
