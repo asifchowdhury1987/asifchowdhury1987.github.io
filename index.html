@@ -33,7 +33,7 @@
             overflow-x: hidden;
         }
 
-        /* Fixed Navigation Header - Fixed text overlap and wrapping issues */
+        /* Fixed Navigation Header */
         header {
             position: fixed;
             top: 20px;
@@ -71,13 +71,13 @@
         .header-right {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 20px;
         }
 
         nav a {
@@ -159,7 +159,6 @@
             padding-top: 35px;
         }
 
-        /* Made the Image Bigger (140px) and perfectly fitting inside the shape */
         .avatar-circle {
             width: 140px;
             height: 140px;
@@ -404,7 +403,7 @@
             font-size: 0.95rem;
             font-weight: 700;
             margin-bottom: 15px;
-                }
+        }
 
         .tools-used {
             font-size: 0.85rem;
@@ -499,15 +498,16 @@
             letter-spacing: 0.3px;
         }
 
-        /* Media Queries for Responsive adjustments */
-        @media (max-width: 1024px) {
-            nav { gap: 15px; }
+        /* Media Queries for Tablet/Mobile Viewports */
+        @media (max-width: 1140px) {
+            nav { gap: 12px; }
+            nav a { font-size: 0.9rem; }
             header { padding: 15px 25px; }
         }
 
-        @media (max-width: 900px) {
-            nav { display: none; } /* Hide navigation menu lines inside mobile */
-            .main-headline { font-size: 2.2rem; }
+        @media (max-width: 991px) {
+            nav { display: none; }
+            .main-headline { font-size: 2.3rem; }
         }
 
         @media (max-width: 768px) {
@@ -602,7 +602,7 @@
         <h2 class="section-title">Email Marketing Campaigns</h2>
         <div class="grid">
 
-            <!-- High Conversion Case: PawBliss -->
+            <!-- Case Study: PawBliss -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="pawbliss-case-study.jpg" alt="PawBliss Flow Setup" class="portfolio-img">
@@ -714,39 +714,55 @@
         <h2 class="section-title">Landing Page Designs</h2>
         <div class="grid">
 
-            <!-- Landing 1: First Aid Training Provider (UK) -->
+            <!-- Landing 1: TaskFlow Design -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="firstaid-landing.jpg" alt="First Aid Training Landing Page" class="portfolio-img">
+                    <img src="taskflow-card.png" alt="TaskFlow Feature Design" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
-                    <h3>First Aid Training Provider Landing Page</h3>
-                    <div class="tag">Client Project</div>
-                    <p>A professional, highly conversion-optimized Mailchimp landing page created for a UK-based first aid training provider to maximize course bookings.</p>
-                    <div class="tools-used">Tools: Mailchimp, Copywriting, UX/UI Layout</div>
+                    <h3>TaskFlow Product Feature Landing Page</h3>
+                    <div class="tag">SaaS Project</div>
+                    <p>Product adoption broadcast structured to inform corporate users about application feature enhancements while maximizing call-to-action engagement.</p>
+                    <div class="tools-used">Tools: Mailchimp, Layout Customization</div>
                     <div class="preview-links-holder">
-                        <a href="firstaid-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="taskflow-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Landing 2: Gram-Banglar Jhurri -->
+            <!-- Landing 2: WebFX Layout -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="grambangla-landing.jpg" alt="Gram-Banglar Jhurri E-commerce Design" class="portfolio-img">
+                    <img src="webfx-card.png" alt="WebFX Agency Layout" class="portfolio-img">
                 </div>
                 <div class="portfolio-info">
-                    <h3>Gram-Banglar Jhurri Agricultural Showcase</h3>
-                    <div class="tag">E-commerce Design</div>
-                    <p>Branding landing page layout designed to highlight local agro-based products with an authentic and organic traditional visual theme.</p>
-                    <div class="tools-used">Tools: Canva Visual Branding, Landing Page Design</div>
+                    <h3>WebFX-Inspired High-Converting Corporate Agency Page</h3>
+                    <div class="tag">Agency Showcase</div>
+                    <p>Data-driven corporate marketing layout structured to display multi-tiered agency services, visual dynamic blocks, and absolute lead acquisition optimization.</p>
+                    <div class="tools-used">Tools: Mailchimp, Layout Formatting</div>
                     <div class="preview-links-holder">
-                        <a href="grambangla-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="webfx-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Landing 3: Apple hardware showcase -->
+
+            <!-- Landing 3: WriteWise Deep Funnel -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="writewise-card.png" alt="WriteWise Interface Design" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>WriteWise AI Deep SaaS Product Sales Funnel</h3>
+                    <div class="tag">AI Tech Page</div>
+                    <p>Modern tech software-as-a-service interface built with clear feature grids, subscription plans, and high-converting modern lead capturing components.</p>
+                    <div class="tools-used">Tools: Mailchimp, Graphic Framing</div>
+                    <div class="preview-links-holder">
+                        <a href="writewise-full.png" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landing 4: Apple Hardware Showcase -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="apple-card.png" alt="Apple Concept Page" class="portfolio-img">
@@ -758,38 +774,6 @@
                     <div class="tools-used">Tools: Mailchimp, Canva Design Elements</div>
                     <div class="preview-links-holder">
                         <a href="apple-full.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Landing 4: WebFX business lead capture -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="novachain-landing.jpg" alt="WebFX Agency Layout" class="portfolio-img">
-                </div>
-                <div class="portfolio-info">
-                    <h3>WebFX-Inspired High-Converting Corporate Agency Page</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>Data-driven corporate marketing layout structured to display multi-tiered agency services, visual dynamic blocks, and absolute lead acquisition optimization.</p>
-                    <div class="tools-used">Tools: Mailchimp, Layout Formatting</div>
-                    <div class="preview-links-holder">
-                        <a href="novachain-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Landing 5: WriteWise AI SaaS layout -->
-            <div class="portfolio-card">
-                <div class="portfolio-img-box">
-                    <img src="blockrise-landing.jpg" alt="WriteWise Interface Design" class="portfolio-img">
-                </div>
-                <div class="portfolio-info">
-                    <h3>WriteWise AI Deep SaaS Product Sales Funnel</h3>
-                    <div class="tag">Concept Project</div>
-                    <p>Modern tech software-as-a-service interface built with clear feature grids, subscription plans, and high-converting modern lead capturing components.</p>
-                    <div class="tools-used">Tools: Mailchimp, Graphic Framing</div>
-                    <div class="preview-links-holder">
-                        <a href="blockrise-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
