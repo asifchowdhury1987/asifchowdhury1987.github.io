@@ -33,19 +33,19 @@
             overflow-x: hidden;
         }
 
-        /* Fixed Navigation Header */
+        /* Fixed Navigation Header - Fixed text overlap and wrapping issues */
         header {
             position: fixed;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 92%;
-            max-width: 1200px;
-            background: rgba(15, 23, 42, 0.8);
+            width: 94%;
+            max-width: 1300px;
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
-            padding: 15px 30px;
+            padding: 15px 40px;
             border-radius: 50px;
             display: flex;
             justify-content: space-between;
@@ -54,14 +54,24 @@
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
         }
 
+        .header-left {
+            flex-shrink: 0;
+        }
+
         .logo-text {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: 0.5px;
         }
 
         .logo-text span {
             color: var(--accent-orange);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
 
         nav {
@@ -77,6 +87,7 @@
             font-weight: 500;
             transition: 0.3s;
             opacity: 0.8;
+            white-space: nowrap;
         }
 
         nav a:hover { 
@@ -87,14 +98,15 @@
         .nav-btn {
             background: var(--btn-glow);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: 0.3s;
             white-space: nowrap;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            flex-shrink: 0;
         }
 
         .nav-btn:hover { 
@@ -108,8 +120,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 150px 20px 60px 20px;
-            max-width: 1100px;
+            padding: 160px 20px 60px 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -147,34 +159,40 @@
             padding-top: 35px;
         }
 
+        /* Made the Image Bigger (140px) and perfectly fitting inside the shape */
         .avatar-circle {
-            width: 100px;
-            height: 100px;
+            width: 140px;
+            height: 140px;
             background: #2e1065;
-            border: 2px solid var(--accent-orange);
+            border: 3px solid var(--accent-orange);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
             flex-shrink: 0;
-            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
         }
 
         .avatar-circle img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
+        }
+
+        .profile-details {
+            flex-grow: 1;
         }
 
         .profile-details h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 5px;
         }
 
         .profile-tagline {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--accent-orange);
             margin-bottom: 15px;
             font-weight: 600;
@@ -281,7 +299,7 @@
 
         /* Content Sections Layout */
         .section {
-            padding: 70px 4% 40px 4%;
+            padding: 80px 4% 40px 4%;
             max-width: 1240px;
             margin: 0 auto;
         }
@@ -386,7 +404,7 @@
             font-size: 0.95rem;
             font-weight: 700;
             margin-bottom: 15px;
-        }
+                }
 
         .tools-used {
             font-size: 0.85rem;
@@ -481,15 +499,26 @@
             letter-spacing: 0.3px;
         }
 
+        /* Media Queries for Responsive adjustments */
+        @media (max-width: 1024px) {
+            nav { gap: 15px; }
+            header { padding: 15px 25px; }
+        }
+
+        @media (max-width: 900px) {
+            nav { display: none; } /* Hide navigation menu lines inside mobile */
+            .main-headline { font-size: 2.2rem; }
+        }
+
         @media (max-width: 768px) {
             header { padding: 12px 20px; width: 95%; }
-            nav { display: none; }
             .profile-container { flex-direction: column; align-items: center; text-align: center; }
             .skills-grid { grid-template-columns: 1fr; justify-items: center; }
             .main-headline { font-size: 1.9rem; text-align: center; }
             .section-title { font-size: 1.9rem; }
-            .hero { padding-top: 120px; }
+            .hero { padding-top: 130px; }
             .about-box { padding: 30px 20px; }
+            .avatar-circle { width: 130px; height: 130px; }
         }
     </style>
 </head>
@@ -589,7 +618,6 @@
 
                     <div class="tools-used">Tools: Klaviyo / Mailchimp, Marketing Strategy</div>
                     <div class="preview-links-holder">
-                        <!-- রিনেম করা নতুন ৩টি ফাইলের লিংক দেওয়া হলো -->
                         <a href="pawbliss-case-study.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         <a href="pawbliss-welcome.jpg" target="_blank" class="preview-link"><i class="fa-solid fa-envelope"></i> Welcome</a>
                         <a href="pawbliss-abandoned.jpg" target="_blank" class="preview-link"><i class="fa-solid fa-cart-shopping"></i> Abandoned</a>
@@ -685,8 +713,40 @@
     <section class="section" id="portfolio-landing">
         <h2 class="section-title">Landing Page Designs</h2>
         <div class="grid">
+
+            <!-- Landing 1: First Aid Training Provider (UK) -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="firstaid-landing.jpg" alt="First Aid Training Landing Page" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>First Aid Training Provider Landing Page</h3>
+                    <div class="tag">Client Project</div>
+                    <p>A professional, highly conversion-optimized Mailchimp landing page created for a UK-based first aid training provider to maximize course bookings.</p>
+                    <div class="tools-used">Tools: Mailchimp, Copywriting, UX/UI Layout</div>
+                    <div class="preview-links-holder">
+                        <a href="firstaid-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landing 2: Gram-Banglar Jhurri -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-box">
+                    <img src="grambangla-landing.jpg" alt="Gram-Banglar Jhurri E-commerce Design" class="portfolio-img">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Gram-Banglar Jhurri Agricultural Showcase</h3>
+                    <div class="tag">E-commerce Design</div>
+                    <p>Branding landing page layout designed to highlight local agro-based products with an authentic and organic traditional visual theme.</p>
+                    <div class="tools-used">Tools: Canva Visual Branding, Landing Page Design</div>
+                    <div class="preview-links-holder">
+                        <a href="grambangla-landing.jpg" target="_blank" class="preview-link">Live Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
             
-            <!-- Landing: Apple hardware showcase -->
+            <!-- Landing 3: Apple hardware showcase -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="apple-card.png" alt="Apple Concept Page" class="portfolio-img">
@@ -702,7 +762,7 @@
                 </div>
             </div>
 
-            <!-- Landing: WebFX business lead capture -->
+            <!-- Landing 4: WebFX business lead capture -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="novachain-landing.jpg" alt="WebFX Agency Layout" class="portfolio-img">
@@ -718,7 +778,7 @@
                 </div>
             </div>
 
-            <!-- Landing: WriteWise AI SaaS layout -->
+            <!-- Landing 5: WriteWise AI SaaS layout -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="blockrise-landing.jpg" alt="WriteWise Interface Design" class="portfolio-img">
@@ -764,7 +824,7 @@
         <h2 class="section-title">Start Your Campaign</h2>
         <ul class="contact-list">
             <li><i class="fa-solid fa-envelope"></i> asifchowdhury914@gmail.com</li>
-            <li class="location-badge-item"><i class="fa-solid fa-globe"></i> Based in Bangladesh · Serving clients globally</li>
+            <li class="location-badge-item"><i class="fa-solid fa-globe"></i> Based in Dhaka, Bangladesh · Serving clients globally</li>
         </ul>
     </section>
 
